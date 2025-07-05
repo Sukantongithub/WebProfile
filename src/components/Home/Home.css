@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Varela+Round&display=swap');
+
+
+.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.balsamiq-sans-regular {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.balsamiq-sans-bold {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.balsamiq-sans-regular-italic {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.balsamiq-sans-bold-italic {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.welcome-text {
+  fill: none;
+  stroke: rgb(253, 181, 0);
+  stroke-width: 2;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: textDraw 5s ease forwards, fillText 1s ease 4s forwards;
+}
+
+@keyframes textDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillText {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: rgb(253, 215, 0);
+  }
+}

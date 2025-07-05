@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Varela+Round&display=swap");
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.text-glow {
+  text-shadow: 0 5px 25px rgb(255, 255, 255);
+}
+
+.nav-backdrop {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item {
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Enhanced text transitions */
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 193, 7, 0.5);
+}
+
+/* Staggered letter wave animation */
+@keyframes letterWave {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.letter-wave {
+  animation: letterWave 0.6s ease-in-out;
+}
+
+/* Text gradient animation */
+@keyframes textGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.text-gradient-animate {
+  background: linear-gradient(-45deg, #f59e0b, #8b5cf6, #ec4899, #10b981);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGradient 3s ease infinite;
+}
+
+/* Letter spacing smooth transition */
+.tracking-smooth {
+  transition: letter-spacing 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Text blur to focus effect */
+@keyframes blurToFocus {
+  0% {
+    filter: blur(2px);
+    opacity: 0.7;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.blur-focus:hover {
+  animation: blurToFocus 0.5s ease-out forwards;
+}
+
+/* Typewriter effect */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #f59e0b;
+  white-space: nowrap;
+  animation: typewriter 2s steps(20) infinite alternate;
+}
