@@ -6,6 +6,8 @@ import Bg from "./components/Bg/Bg";
 import Home from "./components/Home/Home";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
 
 function App() {
   return (
@@ -30,6 +32,28 @@ function App() {
                 <Bg />
                 <Navigation />
                 <Home />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <>
+                <Bg />
+                <Navigation />
+                <About />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/skills"
+            element={
+              <>
+                <Bg />
+                <Navigation />
+                <Skills />
                 <Footer />
               </>
             }

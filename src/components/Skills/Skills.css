@@ -1,0 +1,54 @@
+/* Custom Tabs Styling */
+.custom-tabs .ant-tabs-nav {
+  margin-bottom: 2rem;
+}
+
+/* Tab Items */
+.custom-tabs .ant-tabs-tab {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%) !important;
+  border: 2px solid #4b5563 !important;
+  color: #d1d5db !important;
+  transition: all 0.3s ease !important;
+  border-radius: 12px !important;
+  margin-right: 8px !important;
+  font-weight: 600 !important;
+}
+
+/* Active Tab */
+.custom-tabs .ant-tabs-tab-active {
+  background: linear-gradient(135deg, #f59e0b 0%, #ec4899 100%) !important;
+  border: 2px solid #f59e0b !important;
+  color: #111827 !important;
+}
+
+/* Hover Effects */
+.custom-tabs .ant-tabs-tab:hover:not(.ant-tabs-tab-active) {
+  background: linear-gradient(135deg, #4b5563 0%, #374151 100%) !important;
+  border-color: #f59e0b !important;
+  color: #f59e0b !important;
+}
+
+/* Tab Content */
+.custom-tabs .ant-tabs-content-holder {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+/* Tab Pane */
+.custom-tabs .ant-tabs-tabpane {
+  color: #e5e7eb;
+  min-height: 300px;
+}
+
+/* Remove default borders */
+.custom-tabs .ant-tabs-nav::before {
+  display: none;
+}
+
+/* Tab text styling */
+.custom-tabs .ant-tabs-tab .ant-tabs-tab-btn {
+  color: inherit !important;
+}
