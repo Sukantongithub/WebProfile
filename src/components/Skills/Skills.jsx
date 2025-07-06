@@ -21,14 +21,13 @@ const Skills = () => {
     },
   ];
   return (
-    <div className="flex justify-center items-center px-40 py-30 h-full w-full">
+    <div className="flex justify-center items-start px-40 py-25 min-h-screen w-full">
       <div className="flex justify-between w-full">
         <Tabs theme={{
       token: {
         // Seed Token
         colorPrimary: '#00b96b',
         borderRadius: 10,
-        cardHeightLG:1000,
 
         // Alias Token
         colorBgContainer: '#f6ffed',

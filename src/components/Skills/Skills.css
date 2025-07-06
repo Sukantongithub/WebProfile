@@ -35,12 +35,17 @@
   border-radius: 12px;
   padding: 2rem;
   border: 1px solid rgba(245, 158, 11, 0.2);
+  overflow: visible !important;
+  height: auto !important;
+  min-height: auto !important;
 }
 
 /* Tab Pane */
 .custom-tabs .ant-tabs-tabpane {
   color: #e5e7eb;
-  min-height: 300px;
+  min-height: auto !important;
+  overflow: visible !important;
+  height: auto !important;
 }
 
 /* Remove default borders */
@@ -51,4 +56,14 @@
 /* Tab text styling */
 .custom-tabs .ant-tabs-tab .ant-tabs-tab-btn {
   color: inherit !important;
+}
+
+/* Fix Ant Design default overflow */
+.custom-tabs .ant-tabs-content {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+.custom-tabs .ant-tabs-tabpane-active {
+  overflow: visible !important;
 }
