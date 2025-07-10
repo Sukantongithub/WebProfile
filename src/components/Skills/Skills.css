@@ -67,3 +67,44 @@
 .custom-tabs .ant-tabs-tabpane-active {
   overflow: visible !important;
 }
+
+/* Shared Swiper Styles for Tech Stack and Certification */
+.tech-stack-swiper,
+.cert-swiper {
+  padding-bottom: 80px !important;
+}
+
+.tech-stack-swiper .swiper-pagination,
+.cert-swiper .swiper-pagination {
+  bottom: 20px !important;
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  margin: 0 !important;
+}
+
+.swiper-pagination-bullet-custom,
+.swiper-pagination-bullet-cert {
+  width: 12px !important;
+  height: 12px !important;
+  background: linear-gradient(45deg, #f59e0b, #ec4899) !important;
+  opacity: 0.4 !important;
+  transition: all 0.3s ease !important;
+  margin: 0 6px !important;
+}
+
+.swiper-pagination-bullet-active-custom,
+.swiper-pagination-bullet-active-cert {
+  opacity: 1 !important;
+  transform: scale(1.3) !important;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.6) !important;
+}
+
+.tech-progress .ant-progress-bg {
+  transition: all 0.3s ease !important;
+}
+
+.tech-slide:hover .tech-progress .ant-progress-bg {
+  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.4)) !important;
+}

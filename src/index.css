@@ -105,3 +105,21 @@ button:focus-visible {
 .bgcolor {
   background-color: rgba(255, 255, 255, 0.266);
 }
+
+/* Apply globally */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e90787; /* thumb color */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f3eb09;
+}

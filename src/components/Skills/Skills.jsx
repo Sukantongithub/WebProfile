@@ -3,6 +3,7 @@ import { Tabs } from "antd";
 import { HiMiniSquare3Stack3D } from "react-icons/hi2";
 import { GrCertificate } from "react-icons/gr";
 import TechStack from "./Teckstack";
+import Certification from "./Certification";
 import "./Skills.css";
 
 const Skills = () => {
@@ -16,23 +17,24 @@ const Skills = () => {
     {
       key: "2",
       label: "Certification",
-      content: "Content of Certification",
+      content: <Certification />,
       icon: <GrCertificate className="text-2xl" />,
     },
   ];
   return (
     <div className="flex justify-center items-start px-40 py-25 min-h-screen w-full">
       <div className="flex justify-between w-full">
-        <Tabs theme={{
-      token: {
-        // Seed Token
-        colorPrimary: '#00b96b',
-        borderRadius: 10,
+        <Tabs
+          theme={{
+            token: {
+              // Seed Token
+              colorPrimary: "#00b96b",
+              borderRadius: 10,
 
-        // Alias Token
-        colorBgContainer: '#f6ffed',
-      },
-    }}
+              // Alias Token
+              colorBgContainer: "#f6ffed",
+            },
+          }}
           size="large"
           type="card"
           className="custom-tabs w-full"

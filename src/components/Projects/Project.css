@@ -1,0 +1,51 @@
+.animeright {
+  animation: fadeInr linear;
+  animation-timeline: view();
+  animation-range: 0% 40%;
+}
+.animeleft {
+  animation: fadeInl linear;
+  animation-timeline: view();
+  animation-range: 0% 40%;
+}
+.animefirst {
+  animation: fadeInr 0.8s linear;
+}
+.animesecond {
+  animation: fadeInl 0.8s linear;
+}
+
+@keyframes fadeInr {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInl {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* .timeline {
+  animation: fadeIn linear;
+  animation-timeline: view();
+  animation-range: 0% 10%;
+} */

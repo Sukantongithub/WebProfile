@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { heroui } = require("@heroui/react");
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -12,5 +13,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [heroui(), require("tailwind-scrollbar")],
 };
