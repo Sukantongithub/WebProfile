@@ -22,7 +22,6 @@ function App() {
                 <Bg />
                 <Navigation />
                 <Home />
-                <Footer />
               </>
             }
           />
@@ -33,7 +32,6 @@ function App() {
                 <Bg />
                 <Navigation />
                 <Home />
-                <Footer />
               </>
             }
           />
@@ -41,7 +39,6 @@ function App() {
             path="/about"
             element={
               <>
-                <Bg />
                 <Navigation />
                 <About />
                 <Footer />
@@ -65,7 +62,7 @@ function App() {
               <>
                 <Bg />
                 <Navigation />
-                <Projects/>
+                <Projects />
                 <Footer />
               </>
             }

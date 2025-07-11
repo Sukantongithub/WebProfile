@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FaGithub } from "react-icons/fa";
 
 const Modal = ({ isOpen, onClose, project }) => {
   if (!isOpen) return null;
@@ -73,8 +74,9 @@ const Modal = ({ isOpen, onClose, project }) => {
                     href={project.links.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-colors"
+                    className="flex gap-2 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-colors"
                   >
+                    <FaGithub size={25} />
                     GitHub
                   </a>
                 )}
@@ -96,7 +98,6 @@ const Modal = ({ isOpen, onClose, project }) => {
     </section>
   );
 };
-
 
 Modal.propTypes = {
   isOpen: PropTypes.bool.isRequired,

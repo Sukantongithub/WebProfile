@@ -30,11 +30,12 @@
 
 /* Tab Content */
 .custom-tabs .ant-tabs-content-holder {
-  background: rgba(255, 255, 255, 0.05);
+  background: black;
   backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 2rem;
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 50px 10px rgba(179, 175, 175, 0.1);
   overflow: visible !important;
   height: auto !important;
   min-height: auto !important;

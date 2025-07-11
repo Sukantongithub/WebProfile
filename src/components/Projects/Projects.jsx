@@ -30,9 +30,9 @@ const Projects = () => {
       ],
       year: "2025",
       links: {
-        github: "https://github.com/yourusername/portfolio",
-        demo: "https://yourportfolio.com",
-      },
+        github: "https://github.com/Sukantongithub/WebProfile",
+        demo: "#",
+      },    
     },
     examManagement: {
       title: "MERN School Exam Management System",
@@ -43,8 +43,8 @@ const Projects = () => {
         "Express.js",
         "React",
         "Node.js",
-        "JWT",
         "Mongoose",
+        "socket.io",
       ],
       features: [
         "Student registration and management",
@@ -56,21 +56,14 @@ const Projects = () => {
       ],
       year: "2024",
       links: {
-        github: "https://github.com/yourusername/exam-management",
+        github: "https://github.com/Sukantongithub/DBMS_School_exam_management",
       },
     },
     ecommerce: {
       title: "Basic MERN E-commerce Platform",
       description:
         "Full-stack e-commerce application with product catalog, shopping cart functionality, user authentication, and order management system built using the MERN stack.",
-      technologies: [
-        "MongoDB",
-        "Express.js",
-        "React",
-        "Node.js",
-        "Stripe",
-        "Redux",
-      ],
+      technologies: ["MongoDB", "Express.js", "React", "Node.js"],
       features: [
         "Product catalog with search and filters",
         "Shopping cart functionality",
@@ -81,7 +74,7 @@ const Projects = () => {
       ],
       year: "2024",
       links: {
-        github: "https://github.com/yourusername/ecommerce",
+        github: "https://github.com/Sukantongithub/EMart",
       },
     },
     stockAnalysis: {
@@ -105,20 +98,14 @@ const Projects = () => {
       ],
       year: "2024",
       links: {
-        github: "https://github.com/yourusername/stock-analysis",
+        github: "https://github.com/Sukantongithub/StockScope_MarketViz",
       },
     },
     cityAnalysis: {
       title: "City Circumference Analysis System",
       description:
         "Geographic analysis tool for calculating and visualizing city boundaries, population density mapping, and urban planning metrics using spatial data processing algorithms.",
-      technologies: [
-        "Python",
-        "GeoPandas",
-        "Folium",
-        "PostGIS",
-        "OpenStreetMap API",
-      ],
+      technologies: ["Python", "GeoPandas", "Folium", "OpenStreetMap API"],
       features: [
         "City boundary calculation",
         "Population density mapping",
@@ -129,20 +116,15 @@ const Projects = () => {
       ],
       year: "2023",
       links: {
-        github: "https://github.com/yourusername/city-analysis",
+        github:
+          "https://github.com/Sukantongithub/SmartPulse_API_Integrated-DEV",
       },
     },
     taskScheduler: {
       title: "DSA Task Scheduler Implementation",
       description:
         "Advanced Data Structures and Algorithms project implementing multiple CPU scheduling algorithms including Round Robin, Priority Scheduling, and Shortest Job First (SJF) with performance comparison and visualization.",
-      technologies: [
-        "C++",
-        "Python",
-        "Matplotlib",
-        "Data Structures",
-        "Algorithms",
-      ],
+      technologies: ["C", "Data Structures", "Algorithms"],
       features: [
         "Round Robin scheduling algorithm",
         "Priority-based scheduling",
@@ -153,7 +135,8 @@ const Projects = () => {
       ],
       year: "2023",
       links: {
-        github: "https://github.com/yourusername/task-scheduler",
+        github:
+          "https://github.com/Sukantongithub/AlgoTaskScheduler_FCFS_SJF_Priority_RoundRobin",
       },
     },
   };

@@ -131,7 +131,7 @@ const TechStack = () => {
           breakpoints={{
             640: {
               slidesPerView: 1,
-              spaceBetween: 20,
+              spaceBetween: 10,
               effect: "slide",
             },
             768: {
