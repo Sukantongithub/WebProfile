@@ -32,7 +32,7 @@ const Projects = () => {
       links: {
         github: "https://github.com/Sukantongithub/WebProfile",
         demo: "#",
-      },    
+      },
     },
     examManagement: {
       title: "MERN School Exam Management System",
