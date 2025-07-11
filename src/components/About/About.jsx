@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaEye } from "react-icons/fa";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -16,7 +17,7 @@ const About = () => {
   const visionMission = [
     {
       type: "Vision",
-      icon: "🔮",
+      icon: "👁️",
       title: "Transforming Ideas into Digital Reality",
       description:
         "To become a leading full-stack developer who creates innovative, scalable, and user-centric solutions that make a meaningful impact on businesses and communities worldwide.",
@@ -141,7 +142,14 @@ const About = () => {
       icon: "🌐",
       description:
         "Complete web application development from frontend to backend with modern technologies",
-      technologies: ["React", "Node.js", "MongoDB", "Express.js"],
+      technologies: [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+        "MERN",
+        "Python",
+      ],
       gradient: "bg-gradient-to-tl",
     },
     {
@@ -149,7 +157,7 @@ const About = () => {
       icon: "🗄️",
       description:
         "Efficient database architecture, query optimization, and data management solutions",
-      technologies: ["SQL", "MongoDB", "PostgreSQL", "Redis"],
+      technologies: ["SQL", "MongoDB", "PostgreSQL", "MySQL"],
       gradient: "bg-gradient-to-t",
     },
     {
@@ -157,7 +165,7 @@ const About = () => {
       icon: "🔗",
       description:
         "RESTful API creation, third-party integrations, and microservices architecture",
-      technologies: ["REST", "GraphQL", "JWT", "OAuth"],
+      technologies: ["REST", "JWT"],
       gradient: "bg-gradient-to-tr",
     },
     {
@@ -173,7 +181,7 @@ const About = () => {
       icon: "⚡",
       description:
         "Code optimization, performance tuning, and scalability improvements",
-      technologies: ["Webpack", "Vite", "PWA", "Caching"],
+      technologies: ["Webpack", "Vite", "Caching"],
       gradient: "bg-gradient-to-b",
     },
     {
