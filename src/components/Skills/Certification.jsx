@@ -82,6 +82,12 @@ const Certification = () => {
           }}
           loop={true}
           breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
+            480: {
+              slidesPerView: 1,
+            },
             640: {
               slidesPerView: 1,
               spaceBetween: 20,
@@ -159,7 +165,7 @@ const Certification = () => {
         </Swiper>
 
         {/* Custom Navigation Buttons */}
-        <div className="swiper-button-prev-cert absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-gradient-to-r from-amber-400 to-pink-500 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 shadow-lg">
+        <div className="swiper-button-prev-cert hidden absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-gradient-to-r from-amber-400 to-pink-500 rounded-full xl:flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 shadow-lg">
           <svg
             className="w-6 h-6 text-white"
             fill="none"
@@ -174,7 +180,7 @@ const Certification = () => {
             />
           </svg>
         </div>
-        <div className="swiper-button-next-cert absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-gradient-to-r from-amber-400 to-pink-500 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 shadow-lg">
+        <div className="swiper-button-next-cert hidden absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-gradient-to-r from-amber-400 to-pink-500 rounded-full xl:flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 shadow-lg">
           <svg
             className="w-6 h-6 text-white"
             fill="none"

@@ -13,7 +13,7 @@
 
 .nav-backdrop {
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0);
 }
 
 .nav-item {
@@ -87,19 +87,59 @@
   animation: blurToFocus 0.5s ease-out forwards;
 }
 
-/* Typewriter effect */
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
+.customdevice {
+  @media (max-width: 420px) {
+    flex-direction: column;
+    transform: scale(0.8);
+    h1 {
+      font-size: 3rem;
+    }
+    div {
+      padding: 0px 10px;
+    }
   }
 }
 
-.typewriter {
+/* Mobile menu content blur effect */
+.mobile-menu-open {
   overflow: hidden;
-  border-right: 2px solid #f59e0b;
-  white-space: nowrap;
-  animation: typewriter 2s steps(20) infinite alternate;
+}
+
+/* Only blur the main content, not the navigation */
+.mobile-menu-open #root > *:not(header),
+.mobile-menu-open main,
+.mobile-menu-open .content,
+.mobile-menu-open [data-content] {
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+  pointer-events: none;
+}
+
+/* Ensure navigation stays sharp */
+.mobile-menu-open header,
+.mobile-menu-open nav {
+  filter: none !important;
+  pointer-events: auto !important;
+}
+
+/* Staggered menu item animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-item-animate {
+  animation: slideInUp 0.3s ease forwards;
+}
+
+/* Enhanced mobile menu backdrop */
+.mobile-menu-backdrop {
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.919);
 }
