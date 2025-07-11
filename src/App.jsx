@@ -13,7 +13,7 @@ import Projects from "./components/Projects/Projects";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/WebProfile">
         <Routes>
           <Route
             path="/"
