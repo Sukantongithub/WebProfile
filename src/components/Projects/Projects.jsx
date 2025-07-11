@@ -31,7 +31,7 @@ const Projects = () => {
       year: "2025",
       links: {
         github: "https://github.com/Sukantongithub/WebProfile",
-        demo: "#",
+        demo: "https://sukantongithub.github.io/WebProfile/",
       },
     },
     examManagement: {
