@@ -22,7 +22,7 @@ const Skills = () => {
     },
   ];
   return (
-    <div className="flex justify-center items-start xl:px-40 px-1 xl:mt-10 py-25 min-h-screen w-full">
+    <div className="flex justify-center items-start xl:px-40 px-1 xl:mt-10 py-25 min-h-screen w-full ">
       <div className="flex justify-between w-full">
         <Tabs
           theme={{

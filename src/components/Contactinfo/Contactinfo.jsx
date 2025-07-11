@@ -5,7 +5,7 @@ import { ImLocation2 } from "react-icons/im";
 const CardSpotlightDemo = () => {
   return (
     <CardSpotlight>
-      <div className="flex flex-col items-center  space-y-4 text-amber-400 w-120 ">
+      <div className="flex flex-col items-center space-y-4 text-amber-400 xl:w-120 ">
         <div className="flex z-10 w-full">
           <BiSolidPhoneCall
             size={40}

@@ -42,7 +42,7 @@ const Navigation = () => {
       </h1>
 
       {/* Desktop Navigation */}
-      <nav className="hidden lg:flex items-center bg-white/10 border border-white/20 rounded-full px-3 xl:px-4 py-2 space-x-4 xl:space-x-8 backdrop-blur-md shadow-xl shadow-white/20">
+      <nav className="hidden lg:flex items-center bg-white/10 border border-white/20 rounded-full px-3 xl:px-4 py-2 space-x-4 xl:space-x-8 backdrop-blur-md ">
         {navitems.map((item, index) => (
           <Link key={index} to={item.path}>
             <div

@@ -47,28 +47,28 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-between relative p-8 lg:p-40">
+    <div className="min-h-screen flex flex-col lg:flex-row items-center justify-between relative p-4 sm:p-6 md:p-8 lg:p-16 xl:p-20 2xl:p-40">
       {/* Enhanced Form Section */}
-      <div className="w-full lg:w-1/2">
+      <div className="w-full lg:w-1/2 mb-8 lg:mb-0 mt-25 lg:mt-0">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {/* Header Section */}
-          <div className="mb-8 text-center">
+          <div className="mb-6 sm:mb-8 text-center">
             <motion.h1
-              className="flex items-center justify-center text-5xl font-bold mb-4"
+              className="flex items-center justify-center text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4"
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <PiMessengerLogoFill className="text-amber-400 mr-3 animate-pulse" />
+              <PiMessengerLogoFill className="text-amber-400 mr-2 sm:mr-3 animate-pulse text-3xl sm:text-4xl md:text-5xl" />
               <span className="text-white">ping</span>
               <span className="text-emerald-400 balsamiq-sans-bold">.Me</span>
             </motion.h1>
             <motion.p
-              className="text-gray-300 text-lg"
+              className="text-gray-300 text-sm sm:text-base md:text-lg px-4 sm:px-0"
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.6 }}
@@ -79,7 +79,7 @@ const Contact = () => {
 
           <form
             onSubmit={handleSubmit}
-            className="relative p-8 lg:p-10 bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-xl rounded-3xl border border-amber-500/30 shadow-2xl"
+            className="relative p-4 sm:p-6 md:p-8 lg:p-10 bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-amber-500/30 shadow-2xl mx-2 sm:mx-0"
             style={{ boxShadow: "0 0px 30px rgba(245, 158, 11, 0.3)" }}
           >
             {/* Success Message */}
@@ -87,7 +87,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-center"
+                className="mb-4 sm:mb-6 p-3 sm:p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-center text-sm sm:text-base"
               >
                 {submitMessage}
               </motion.div>
@@ -95,12 +95,15 @@ const Contact = () => {
 
             {/* Name Field */}
             <motion.div
-              className="relative mb-6"
+              className="relative mb-4 sm:mb-6"
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.6 }}
             >
-              <FaUser size={25} className="absolute left-3 top-3 text-amber-400 z-10" />
+              <FaUser
+                size={20}
+                className="absolute left-3 top-3 sm:top-3.5 text-amber-400 z-10 sm:text-[25px]"
+              />
               <input
                 type="text"
                 name="name"
@@ -108,13 +111,13 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Name"
                 required
-                className="w-full pl-10 pr-4 py-3 bg-gray-800/80 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 hover:bg-gray-700/80"
+                className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-3.5 bg-gray-800/80 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 hover:bg-gray-700/80 text-sm sm:text-base"
               />
             </motion.div>
 
             {/* Phone Section */}
             <motion.div
-              className="flex gap-4 mb-6"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4 sm:mb-6"
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.6 }}
@@ -123,7 +126,7 @@ const Contact = () => {
                 name="countryCode"
                 value={formData.countryCode}
                 onChange={handleChange}
-                className="px-3 py-3 bg-gray-800/80 border border-gray-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 hover:bg-gray-700/80"
+                className="w-full sm:w-auto px-3 py-3 sm:py-3.5 bg-gray-800/80 border border-gray-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 hover:bg-gray-700/80 text-sm sm:text-base"
               >
                 <option value="+91">India (+91)</option>
                 <option value="+1">USA (+1)</option>
@@ -133,10 +136,12 @@ const Contact = () => {
                 <option value="+86">China (+86)</option>
                 <option value="+81">Japan (+81)</option>
                 <option value="+61">Australia (+61)</option>
-                {/* ...existing options... */}
               </select>
               <div className="relative flex-1">
-                <BiSolidPhoneCall size={25} className="absolute left-3 top-3 text-amber-400 z-10" />
+                <BiSolidPhoneCall
+                  size={20}
+                  className="absolute left-3 top-3 sm:top-3.5 text-amber-400 z-10 sm:text-[25px]"
+                />
                 <input
                   type="tel"
                   name="phone"
@@ -144,19 +149,22 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Your Phone Number"
                   required
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/80 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 hover:bg-gray-700/80"
+                  className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-3.5 bg-gray-800/80 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 hover:bg-gray-700/80 text-sm sm:text-base"
                 />
               </div>
             </motion.div>
 
             {/* Email Field */}
             <motion.div
-              className="relative mb-6"
+              className="relative mb-4 sm:mb-6"
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              <FaEnvelope size={25} className="absolute left-3 top-3 text-amber-400 z-10" />
+              <FaEnvelope
+                size={20}
+                className="absolute left-3 top-3 sm:top-3.5 text-amber-400 z-10 sm:text-[25px]"
+              />
               <input
                 type="email"
                 name="email"
@@ -164,13 +172,13 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Email"
                 required
-                className="w-full pl-10 pr-4 py-3 bg-gray-800/80 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 hover:bg-gray-700/80"
+                className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-3.5 bg-gray-800/80 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 hover:bg-gray-700/80 text-sm sm:text-base"
               />
             </motion.div>
 
             {/* Message Field */}
             <motion.div
-              className="mb-6"
+              className="mb-4 sm:mb-6"
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.9, duration: 0.6 }}
@@ -182,7 +190,7 @@ const Contact = () => {
                 placeholder="Your Message"
                 required
                 rows="4"
-                className="w-full px-4 py-3 bg-gray-800/80 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 hover:bg-gray-700/80 resize-none"
+                className="w-full px-4 py-3 sm:py-3.5 bg-gray-800/80 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 hover:bg-gray-700/80 resize-none text-sm sm:text-base"
               ></textarea>
             </motion.div>
 
@@ -190,7 +198,7 @@ const Contact = () => {
             <motion.button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full px-6 py-4 bg-gradient-to-r from-amber-400 to-orange-600 text-gray-900 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 ${
+              className={`w-full px-6 py-3 sm:py-4 bg-gradient-to-r from-amber-400 to-orange-600 text-gray-900 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 text-sm sm:text-base ${
                 isSubmitting
                   ? "opacity-70 cursor-not-allowed"
                   : "hover:scale-[1.02] active:scale-[0.98]"
@@ -203,12 +211,12 @@ const Contact = () => {
             >
               {isSubmitting ? (
                 <>
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-gray-900"></div>
-                  Sending...
+                  <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-gray-900"></div>
+                  <span className="ml-2">Sending...</span>
                 </>
               ) : (
                 <>
-                  <FaPaperPlane className="text-lg" />
+                  <FaPaperPlane className="text-sm sm:text-lg" />
                   Send Message
                 </>
               )}
@@ -219,13 +227,20 @@ const Contact = () => {
 
       {/* Right Side Components */}
       <motion.div
-        className="hidden lg:flex flex-col items-center justify-between space-y-12 "
+        className="w-full  lg:w-1/2 xl:flex xl:flex-col lg:flex-col items-center justify-center lg:justify-between space-y-6 lg:space-y-12"
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        <Contactinfo />
-        <Folder size={1.5} className="-mb-25 mt-25" />
+        <div className="flex justify-center scale-80 lg:scale-100 ">
+          <Contactinfo />
+        </div>
+        <div className="w-full flex justify-center mt-20 xl:mt-0">
+          <Folder
+            size={1.2}
+            className="sm:scale-125 lg:scale-130 xl:-mb-25 xl:mt-28"
+          />
+        </div>
       </motion.div>
     </div>
   );

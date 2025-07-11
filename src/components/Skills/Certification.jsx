@@ -24,13 +24,13 @@ const Certification = () => {
     css: {
       name: "CSS basics in Hackerrank",
       image: CSS,
-      link: "https://www.hackerrank.com/certificates/3f0b1c6d8a2e",
+      link: "https://www.hackerrank.com/certificates/76f6e38d7eaa",
       issuer: "HackerRank",
     },
     sql: {
       name: "SQL basics in Hackerrank",
       image: SQL,
-      link: "https://www.hackerrank.com/certificates/3f0b1c6d8a2e",
+      link: "https://www.hackerrank.com/certificates/19a1ed4476e8",
       issuer: "HackerRank",
     },
     crud: {

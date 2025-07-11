@@ -99,7 +99,7 @@ const TechStack = () => {
         Tech Stack
       </h1>
 
-      <div className="relative flex items-center justify-center w-full h-full ">
+      <div className="relative flex items-center justify-center w-full ">
         <Swiper
           modules={[Navigation, Pagination, A11y, Autoplay, EffectCoverflow]}
           effect="coverflow"
@@ -181,12 +181,12 @@ const TechStack = () => {
                     {tech.name}
                   </h3>
 
-                  <div className="w-full max-w-xs px-2">
+                  <div className="w-full max-w-xs px-2 py-6">
                     <div className="flex justify-between items-center mb-2 sm:mb-3">
-                      <span className="text-xs sm:text-sm text-gray-300 font-medium">
+                      <span className="text-md sm:text-sm text-gray-300 font-medium">
                         Proficiency
                       </span>
-                      <span className="text-xs sm:text-sm font-bold text-amber-400">
+                      <span className="text-md sm:text-sm font-bold text-amber-400">
                         {tech.progress}%
                       </span>
                     </div>
