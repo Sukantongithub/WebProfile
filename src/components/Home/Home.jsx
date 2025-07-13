@@ -6,6 +6,9 @@ import Profile from "../../assets/Profile_edit.png";
 import ProfileNo from "../../assets/Profile_editnoBg.png";
 import Footer from "../Footer/Footer";
 import Resume from "../../assets/MERN Resume.pdf";
+import HackerRankLogo from "../../assets/HackerRank.png";
+import LeetCodeLogo from "../../assets/LeetCode.png";
+import CodeChefLogo from "../../assets/CodeChef.png";
 import "./Home.css";
 
 const Home = () => {
@@ -101,6 +104,86 @@ const Home = () => {
                 </button>
               </Link>
             </motion.div>
+          </div>
+
+          {/* Coding Profile Links */}
+          <div className="mt-6 sm:mt-8">
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 text-center lg:text-left">
+              Check out my coding profiles:
+            </h3>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center lg:items-start">
+              {/* HackerRank */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="w-full sm:w-auto"
+              >
+                <a
+                  href="https://www.hackerrank.com/profile/sukantravi005"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full sm:w-auto"
+                >
+                  <button className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 rounded-2xl bg-green-600 hover:bg-green-700 text-sm sm:text-base font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-green-600/30 hover:scale-95 cursor-pointer flex items-center justify-center gap-2">
+                    <img
+                      src={HackerRankLogo}
+                      alt="HackerRank"
+                      className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+                    />
+                    HackerRank
+                  </button>
+                </a>
+              </motion.div>
+
+              {/* LeetCode */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="w-full sm:w-auto"
+              >
+                <a
+                  href="https://leetcode.com/u/Sukant_R/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full sm:w-auto"
+                >
+                  <button className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 rounded-2xl bg-orange-400 hover:bg-orange-500 text-sm sm:text-base font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-orange-600/30 hover:scale-95 cursor-pointer flex items-center justify-center gap-2">
+                    <img
+                      src={LeetCodeLogo}
+                      alt="LeetCode"
+                      className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+                    />
+                    LeetCode
+                  </button>
+                </a>
+              </motion.div>
+
+              {/* CodeChef */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="w-full sm:w-auto"
+              >
+                <a
+                  href="https://www.codechef.com/users/sukant_2005"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full sm:w-auto"
+                >
+                  <button className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 rounded-2xl bg-white hover:bg-gray-100 text-sm sm:text-base font-semibold text-gray-900 transition-all duration-300 shadow-lg hover:shadow-amber-600/30 hover:scale-95 cursor-pointer flex items-center justify-center gap-2 border-2 border-amber-500">
+                    <img
+                      src={CodeChefLogo}
+                      alt="CodeChef"
+                      className="w-6 h-6 sm:w-7 sm:h-7 object-contain"
+                    />
+                    CodeChef
+                  </button>
+                </a>
+              </motion.div>
+            </div>
           </div>
         </div>
 
