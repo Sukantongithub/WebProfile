@@ -18,6 +18,7 @@ import SQL from "../../assets/sql.png";
 import CRUD from "../../assets/CRUD.png";
 import NPTEL from "../../assets/Nptel.png";
 import Developer from "../../assets/Developer.jpg";
+import Oracle from "../../assets/Oracle.png";
 
 const Certification = () => {
   const certs = {
@@ -50,6 +51,12 @@ const Certification = () => {
       image: Developer,
       link: "https://ti-user-certificates.s3.amazonaws.com/ae62dcd7-abdc-4e90-a570-83eccba49043/6eef8e14-78d0-4eba-a2df-e89cd60c18b4-sukant-r-6c00b9de-89b0-441d-a787-faf0f2dc2d3c-certificate.pdf",
       issuer: "HackerRank",
+    },
+    oracle: {
+      name: "Oracle Certification",
+      image: Oracle,
+      link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=3709E87AAB369E2689746FD4B9A67C4EF2FD0EC84586ED437E09F54C91FE7A4D",
+      issuer: "Oracle",
     },
   };
 

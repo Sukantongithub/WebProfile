@@ -21,7 +21,7 @@ const CardSpotlightDemo = () => {
             color="black"
           />
           <h1 className="text-2xl font-semibold  ml-3">
-            sukantravi005@gmail.com
+            sukantonmail@gmail.com
           </h1>
         </div>
         <div className="flex z-10 w-full">
