@@ -16,10 +16,10 @@ import "swiper/css/effect-coverflow";
 import CSS from "../../assets/css.png";
 import SQL from "../../assets/sql.png";
 import CRUD from "../../assets/CRUD.png";
-import NPTEL from "../../assets/Nptel.png";
+import NPTEL from "../../assets/Nptel_iot.png";
 import Developer from "../../assets/Developer.jpg";
 import Oracle from "../../assets/Oracle.png";
-
+import Nptel_python from "../../assets/Nptel_python.png";
 const Certification = () => {
   const certs = {
     css: {
@@ -38,25 +38,31 @@ const Certification = () => {
       name: "CRUD Operations in MongoDB",
       image: CRUD,
       link: "https://ti-user-certificates.s3.amazonaws.com/ae62dcd7-abdc-4e90-a570-83eccba49043/6eef8e14-78d0-4eba-a2df-e89cd60c18b4-sukant-r-beb61a8e-76e9-4274-9941-f63997e04689-certificate.pdf",
-      issuer: "HackerRank",
+      issuer: "MongoDB University",
     },
     nptel: {
-      name: "NPTEL-Introduction to Industrial 4.0",
+      name: "Introduction To Industry 4.0 And Industrial Internet Of Things",
       image: NPTEL,
-      link: "https://nptel.ac.in/noc/certificate.html",
-      issuer: "NPTEL",
+      link: "https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs43/Course/NPTEL25CS43S64900019204339860.pdf",
+      issuer: "Nptel Swayam",
     },
     developer: {
       name: "MongoDB Certified Developer",
       image: Developer,
       link: "https://ti-user-certificates.s3.amazonaws.com/ae62dcd7-abdc-4e90-a570-83eccba49043/6eef8e14-78d0-4eba-a2df-e89cd60c18b4-sukant-r-6c00b9de-89b0-441d-a787-faf0f2dc2d3c-certificate.pdf",
-      issuer: "HackerRank",
+      issuer: "MongoDB University",
     },
     oracle: {
       name: "Oracle Certification",
       image: Oracle,
       link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=3709E87AAB369E2689746FD4B9A67C4EF2FD0EC84586ED437E09F54C91FE7A4D",
       issuer: "Oracle",
+    },
+    nptel_python: {
+      name: "The Joy of Computing using Python",
+      image: Nptel_python,
+      link: "https://archive.nptel.ac.in/content/noc/NOC25/SEM2/Ecertificates/106/noc25-cs103/Course/NPTEL25CS103S96020063510909252.pdf",
+      issuer: "Nptel Swayam",
     },
   };
 

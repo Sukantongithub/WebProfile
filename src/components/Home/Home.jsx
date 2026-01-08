@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import Profile from "../../assets/Profile_edit.png";
 import ProfileNo from "../../assets/Profile_editnoBg.png";
 import Footer from "../Footer/Footer";
-import Resume from "../../assets/MERN Resume.pdf";
+import Resume from "../../assets/Sukant_Resume.pdf";
 import HackerRankLogo from "../../assets/HackerRank.png";
 import LeetCodeLogo from "../../assets/LeetCode.png";
 import CodeChefLogo from "../../assets/CodeChef.png";

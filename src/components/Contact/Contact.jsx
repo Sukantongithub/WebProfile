@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { PiMessengerLogoFill } from "react-icons/pi";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { FaEnvelope, FaUser, FaPhone, FaPaperPlane } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 import Contactinfo from "../Contactinfo/Contactinfo";
 import Folder from "../Socialfolders/Folder";
 
 const Contact = () => {
+  const formRef = useRef();
   const [formData, setFormData] = useState({
     name: "",
     countryCode: "+91",
@@ -16,20 +18,33 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
+  const [submitError, setSubmitError] = useState("");
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage("");
+    setSubmitError("");
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Initialize EmailJS with public key
+      emailjs.init("kozSxIoeJGlm-rL5p");
+
+      const result = await emailjs.sendForm(
+        "service_portfolio", // Your Service ID
+        "template_nsm6ooi", // Your Template ID
+        formRef.current
+      );
+
+      console.log("EmailJS Success:", result);
       setIsSubmitting(false);
       setSubmitMessage("Message sent successfully! 🎉");
       setFormData({
@@ -42,8 +57,22 @@ const Contact = () => {
 
       setTimeout(() => {
         setSubmitMessage("");
-      }, 3000);
-    }, 2000);
+      }, 5000);
+    } catch (error) {
+      console.error("EmailJS Error Details:", error);
+      console.error("Error text:", error.text);
+      console.error("Error status:", error.status);
+      setIsSubmitting(false);
+      setSubmitError(
+        `Failed to send message: ${
+          error.text || "Please check your EmailJS configuration"
+        }`
+      );
+
+      setTimeout(() => {
+        setSubmitError("");
+      }, 5000);
+    }
   };
 
   return (
@@ -78,6 +107,7 @@ const Contact = () => {
           </div>
 
           <form
+            ref={formRef}
             onSubmit={handleSubmit}
             className="relative p-4 sm:p-6 md:p-8 lg:p-10 bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-amber-500/30 shadow-2xl mx-2 sm:mx-0"
             style={{ boxShadow: "0 0px 30px rgba(245, 158, 11, 0.3)" }}
@@ -90,6 +120,17 @@ const Contact = () => {
                 className="mb-4 sm:mb-6 p-3 sm:p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-center text-sm sm:text-base"
               >
                 {submitMessage}
+              </motion.div>
+            )}
+
+            {/* Error Message */}
+            {submitError && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-4 sm:mb-6 p-3 sm:p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 text-center text-sm sm:text-base"
+              >
+                {submitError}
               </motion.div>
             )}
 
@@ -144,14 +185,22 @@ const Contact = () => {
                 />
                 <input
                   type="tel"
-                  name="phone"
+                  name="phoneNumber"
                   value={formData.phone}
-                  onChange={handleChange}
+                  onChange={(e) =>
+                    setFormData({ ...formData, phone: e.target.value })
+                  }
                   placeholder="Your Phone Number"
                   required
                   className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-3.5 bg-gray-800/80 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 hover:bg-gray-700/80 text-sm sm:text-base"
                 />
               </div>
+              {/* Hidden field for EmailJS */}
+              <input
+                type="hidden"
+                name="phone"
+                value={`${formData.countryCode} ${formData.phone}`}
+              />
             </motion.div>
 
             {/* Email Field */}

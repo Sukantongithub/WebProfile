@@ -41,7 +41,7 @@ const About = () => {
       field: "Artificial Intelligence & Data Science",
       year: "2023 - 2025",
       institution: "M Kumarasamy College of Engineering ",
-      grade: "8.1 + CGPA",
+      grade: "8.1 CGPA",
       highlights: [
         "Data Structures & Algorithms",
         "Database Management",

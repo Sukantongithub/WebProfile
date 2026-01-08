@@ -10,6 +10,29 @@ const Projects = () => {
 
   // Project data with detailed information
   const projectsData = {
+    healthcare: {
+      title: "Automated Diagnostic System",
+      description:
+        "Machine Learning-powered web application for medical diagnosis.",
+      technologies: [
+        "Python",
+        "Flask",
+        "Machine Learning",
+        "MongoDB",
+        "scikit-learn",
+      ],
+      features: [
+        "AI-Powered Diagnosis with RandomForest ML model",
+        "Secure Authentication with user login and session management",
+        "Patient Dashboard for managing medical records",
+        "Form Validation on client and server side",
+        "Cloud Database with MongoDB Atlas integration",
+      ],
+      year: "2025",
+      links: {
+        github: "https://github.com/Sukantongithub/Health_Diagnosis",
+      },
+    },
     portfolio: {
       title: "Portfolio Website",
       description:
@@ -180,6 +203,28 @@ const Projects = () => {
                   <div className=" ml-2 pb-8 animefirst">
                     <article className="border py-1 rounded-lg bg-white/10 backdrop-blur-lg shadow-xl shadow-white/10">
                       <h3 className="text-lg font-semibold text-amber-500 mb-2 ml-2">
+                        Automated Diagnostic System
+                      </h3>
+                      <p className="text-gray-300 ml-8 text-justify mr-5">
+                        Machine Learning-powered web application for medical
+                        diagnosis.
+                      </p>
+                      <button
+                        onClick={() => openModal("healthcare")}
+                        className="text-white border px-4 py-2 rounded-lg mt-2 mb-2 ml-8 hover:bg-white/50 hover:text-gray-900 font-semibold active:scale-95 transition-all duration-300"
+                      >
+                        More info
+                      </button>
+                    </article>
+                  </div>
+                ),
+              },
+              {
+                label: "2025",
+                children: (
+                  <div className=" ml-2 pb-8 animesecond">
+                    <article className="border py-1 rounded-lg bg-white/10 backdrop-blur-lg shadow-xl shadow-white/10">
+                      <h3 className="text-lg font-semibold text-amber-500 mb-2 ml-2">
                         Portfolio Website
                       </h3>
                       <p className="text-gray-300 ml-8 text-justify mr-5">
@@ -201,7 +246,7 @@ const Projects = () => {
               {
                 label: "2024",
                 children: (
-                  <div className=" ml-2 pb-8 animesecond">
+                  <div className=" ml-2 pb-8 animeright">
                     <article className="border py-1 rounded-lg bg-white/10 backdrop-blur-lg shadow-xl shadow-white/10">
                       <h3 className="text-lg font-semibold text-amber-500 mb-2 mr-2">
                         MERN School Exam Management System
@@ -225,7 +270,7 @@ const Projects = () => {
               {
                 label: "2024",
                 children: (
-                  <div className=" ml-2 pb-8 animeright ">
+                  <div className=" ml-2 pb-8 animeleft ">
                     <article className="border py-1 rounded-lg bg-white/10 backdrop-blur-lg shadow-xl shadow-white/10">
                       <h3 className="text-lg font-semibold text-amber-500 mb-2 ml-2">
                         Basic MERN E-commerce Platform
@@ -248,7 +293,7 @@ const Projects = () => {
               {
                 label: "2024",
                 children: (
-                  <div className=" ml-2 pb-8 animeleft ">
+                  <div className=" ml-2 pb-8 animeright">
                     <article className="border py-1 rounded-lg bg-white/10 backdrop-blur-lg shadow-xl shadow-white/10">
                       <h3 className="text-lg font-semibold text-amber-500 mb-2 mr-2">
                         Stock Market Analysis Tool
@@ -272,7 +317,7 @@ const Projects = () => {
               {
                 label: "2023",
                 children: (
-                  <div className=" ml-2 pb-8 animeright ">
+                  <div className=" ml-2 pb-8 animeleft ">
                     <article className="border py-1 rounded-lg bg-white/10 backdrop-blur-lg shadow-xl shadow-white/10">
                       <h3 className="text-lg font-semibold text-amber-500 mb-2 ml-2">
                         City Circumference Analysis System
@@ -296,7 +341,7 @@ const Projects = () => {
               {
                 label: "2023",
                 children: (
-                  <div className=" ml-2 pb-8 animeleft   ">
+                  <div className=" ml-2 pb-8 animeright   ">
                     <article className="border py-1 rounded-lg bg-white/10 backdrop-blur-lg shadow-xl shadow-white/10">
                       <h3 className="text-lg font-semibold text-amber-500 mb-2 mr-2">
                         DSA Task Scheduler Implementation
