@@ -18,6 +18,7 @@ import SQL from "../../assets/sql.png";
 import CRUD from "../../assets/CRUD.png";
 import NPTEL from "../../assets/Nptel_iot.png";
 import Developer from "../../assets/Developer.png";
+import Atlas from "../../assets/Atlas.png";
 import Oracle from "../../assets/Oracle.png";
 import Nptel_python from "../../assets/Nptel_python.png";
 const Certification = () => {
@@ -49,8 +50,14 @@ const Certification = () => {
     developer: {
       name: "MongoDB Certified Developer",
       image: Developer,
-      link: "https://ti-user-certificates.s3.amazonaws.com/ae62dcd7-abdc-4e90-a570-83eccba49043/6eef8e14-78d0-4eba-a2df-e89cd60c18b4-sukant-r-6c00b9de-89b0-441d-a787-faf0f2dc2d3c-certificate.pdf",
+      link: "https://ti-user-certificates.s3.us-east-1.amazonaws.com/ae62dcd7-abdc-4e90-a570-83eccba49043/6eef8e14-78d0-4eba-a2df-e89cd60c18b4-sukant-ravichandran-feddf159-9e25-4128-aca8-2a71865b6e44-certificate.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJPREDE4LLNE2GD6Q%2F20261023%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261023T230525Z&X-Amz-Expires=900&X-Amz-Signature=fb942ef6920ef94b59e9c106020a562c9d0410d87dfddc3b0d3fc148b48a88d8&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       issuer: "MongoDB University",
+    },
+    atlas: {
+      name: "MongoDB Certified Administrator",
+      image: Atlas,
+      link: "https://ti-user-certificates.s3.us-east-1.amazonaws.com/ae62dcd7-abdc-4e90-a570-83eccba49043/6eef8e14-78d0-4eba-a2df-e89cd60c18b4-sukant-ravichandran-87eafdba-2015-4483-bc34-ea0f0d6b9bda-certificate.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJPREDE4LLNE2GD6Q%2F20261023%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261023T230624Z&X-Amz-Expires=900&X-Amz-Signature=113f3814dfd3393bf06ee9afd37df5e4dc534239cef521934670bd17bce17a5d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      issuer: "MongoDB Atlas",
     },
     oracle: {
       name: "Oracle Certification",
