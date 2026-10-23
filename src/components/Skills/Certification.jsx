@@ -17,7 +17,7 @@ import CSS from "../../assets/css.png";
 import SQL from "../../assets/sql.png";
 import CRUD from "../../assets/CRUD.png";
 import NPTEL from "../../assets/Nptel_iot.png";
-import Developer from "../../assets/Developer.jpg";
+import Developer from "../../assets/Developer.png";
 import Oracle from "../../assets/Oracle.png";
 import Nptel_python from "../../assets/Nptel_python.png";
 const Certification = () => {
