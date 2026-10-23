@@ -10,7 +10,7 @@ const Skills = () => {
   const tabs = [
     {
       key: "1",
-      label: "Tech Stack",
+      label: "Technical Skills",
       content: <TechStack />,
       icon: <HiMiniSquare3Stack3D className="text-2xl" />,
     },

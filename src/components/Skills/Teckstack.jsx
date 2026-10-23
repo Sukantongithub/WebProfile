@@ -96,7 +96,7 @@ const TechStack = () => {
   return (
     <div className="w-full">
       <h1 className="text-center text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 lg:mb-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-pink-500">
-        Tech Stack
+        Technical Skills
       </h1>
 
       <div className="relative flex items-center justify-center w-full ">
